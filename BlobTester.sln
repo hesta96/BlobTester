@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobTester", "BlobTester\BlobTester.csproj", "{8A8AD23F-662F-47E4-92B4-C4DE52B36999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobTester.Common", "BlobTester.Common\BlobTester.Common.csproj", "{772696AB-5994-4A72-9DE0-C9A1458094EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobTester.Tests", "BlobTester.Tests\BlobTester.Tests.csproj", "{03605FF5-FF13-4589-B544-B81F7030B686}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A8AD23F-662F-47E4-92B4-C4DE52B36999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8AD23F-662F-47E4-92B4-C4DE52B36999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8AD23F-662F-47E4-92B4-C4DE52B36999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8AD23F-662F-47E4-92B4-C4DE52B36999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772696AB-5994-4A72-9DE0-C9A1458094EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772696AB-5994-4A72-9DE0-C9A1458094EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772696AB-5994-4A72-9DE0-C9A1458094EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772696AB-5994-4A72-9DE0-C9A1458094EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03605FF5-FF13-4589-B544-B81F7030B686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03605FF5-FF13-4589-B544-B81F7030B686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03605FF5-FF13-4589-B544-B81F7030B686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03605FF5-FF13-4589-B544-B81F7030B686}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
