@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Text;
-using BlobTester.Common;
-using NUnit.Framework;
 
-namespace BlobTester.Tests
+namespace BlobTester.Common.MSTests
 {
-    [TestFixture]
+    [TestClass()]
     public class AzureFileUploadRepositoryTests
     {
-        [Test]
-        public void CanUploadFile()
+        [TestMethod()]
+        public void UploadFileTest()
         {
             const string newFileBlob = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus ex nec nibh suscipit, eu iaculis est luctus. Donec et nunc lectus. Morbi finibus mauris lacus, at porttitor felis tristique id. Aenean non dolor mattis, dictum enim eget, elementum erat. Donec gravida ultrices lacinia. Fusce eu nibh faucibus, vulputate lectus at, fermentum nisi. Phasellus fringilla risus a odio sodales, id cursus felis varius. Phasellus a ultrices nibh.
                                         Proin pretium consequat semper. Ut varius maximus vehicula. Sed vulputate quam eu quam ultrices, sed vehicula justo molestie. Vivamus libero turpis, finibus pretium turpis at, iaculis convallis felis. Vivamus facilisis at nunc ut maximus. Vestibulum et commodo tellus. Aliquam quam nunc, vehicula ut nulla in, pulvinar fermentum tortor.
@@ -26,14 +25,13 @@ namespace BlobTester.Tests
 
             var azureFileUploadRepository = new AzureFileUploadRepository();
 
-            Assert.That(azureFileUploadRepository.StorageConnectionString, Is.EqualTo("[StorageConString]"));
+            Assert.AreEqual(azureFileUploadRepository.StorageConnectionString, "[StorageConString]");
 
             var fileName = Guid.NewGuid();
 
             var fileInfo = azureFileUploadRepository.UploadFile(byteArray, fileName);
 
-            Assert.That(fileInfo, Is.Not.Null);
-
+            Assert.IsNotNull(fileInfo);
         }
     }
 }

@@ -9,6 +9,17 @@
 
     public class AzureFileUploadRepository : IFileUploadRepository
     {
+        private string storageConnectionString;
+        public string StorageConnectionString
+        {
+            get { return storageConnectionString; }
+        }
+
+        public AzureFileUploadRepository()
+        {
+            storageConnectionString = CloudConfigurationManager.GetSetting("StorageConnectionString");
+        }
+
         public string UploadFile(byte[] file, Guid? fileName = null)
         {
             var container = this.GetContainer();
@@ -29,9 +40,9 @@
 
         private CloudBlobContainer GetContainer()
         {
-            var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+            var storageAccount = CloudStorageAccount.Parse(storageConnectionString);
             var blobClient = storageAccount.CreateCloudBlobClient();
-            var container = blobClient.GetContainerReference("myContainer");
+            var container = blobClient.GetContainerReference("mycontainer");
             container.CreateIfNotExists();
 
             return container;
